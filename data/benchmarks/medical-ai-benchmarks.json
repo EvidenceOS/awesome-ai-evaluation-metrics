@@ -1,0 +1,56 @@
+[
+  {
+    "name": "MedQA",
+    "focus": "Medical knowledge (USMLE-style MCQ)",
+    "format": "Multiple choice",
+    "size": "12,723 questions",
+    "top_score": ">90% (GPT-4, Med-PaLM 2)",
+    "limitations": ["MCQ format tests recall not reasoning", "Saturated by top models", "No abstention scoring"],
+    "url": "https://github.com/jind11/MedQA"
+  },
+  {
+    "name": "PubMedQA",
+    "focus": "Biomedical literature comprehension",
+    "format": "Yes/No/Maybe",
+    "size": "1,000 expert-annotated",
+    "top_score": ">80%",
+    "limitations": ["Binary/ternary format", "Limited clinical reasoning depth"],
+    "url": "https://pubmedqa.github.io/"
+  },
+  {
+    "name": "MedMCQA",
+    "focus": "Medical knowledge (Indian medical exams)",
+    "format": "Multiple choice (4 options)",
+    "size": "194,000 questions",
+    "top_score": ">70%",
+    "limitations": ["Domain-specific (Indian curriculum)", "MCQ format"],
+    "url": "https://medmcqa.github.io/"
+  },
+  {
+    "name": "MMLU (Medical subset)",
+    "focus": "Multitask medical knowledge",
+    "format": "Multiple choice",
+    "size": "~1,800 medical questions across 6 subjects",
+    "top_score": ">90%",
+    "limitations": ["MCQ format", "Knowledge recall not clinical reasoning", "Part of larger general benchmark"],
+    "url": "https://github.com/hendrycks/test"
+  },
+  {
+    "name": "AgentBench",
+    "focus": "Multi-task agent evaluation",
+    "format": "Interactive environment",
+    "size": "8 environments",
+    "top_score": "GPT-4 leads",
+    "limitations": ["Controlled environment ≠ real world", "No health-specific tasks"],
+    "url": "https://github.com/THUDM/AgentBench"
+  },
+  {
+    "name": "SWE-bench",
+    "focus": "Software engineering task completion",
+    "format": "Code generation + testing",
+    "size": "2,294 GitHub issues",
+    "top_score": "~50% resolved (top agents)",
+    "limitations": ["Code-only", "Narrow skill", "Reproducibility challenges"],
+    "url": "https://www.swebench.com/"
+  }
+]

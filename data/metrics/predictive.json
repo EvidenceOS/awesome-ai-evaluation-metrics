@@ -1,0 +1,71 @@
+[
+  {
+    "name": "AUROC",
+    "aliases": ["AUC", "AUC-ROC", "C-statistic"],
+    "modality": "predictive",
+    "category": "discrimination",
+    "definition": "Area under the Receiver Operating Characteristic curve. Probability that a randomly chosen positive has higher predicted probability than a randomly chosen negative.",
+    "range": "[0.5, 1.0] where 0.5 is random, 1.0 is perfect",
+    "when_to_use": "Binary classification model comparison, threshold-independent evaluation",
+    "limitations": "Insensitive to calibration. Can be misleading with severe class imbalance. Does not reflect clinical utility.",
+    "key_paper": "https://doi.org/10.1148/radiology.143.1.7063747",
+    "implementations": [
+      { "library": "scikit-learn", "url": "https://scikit-learn.org/stable/modules/generated/sklearn.metrics.roc_auc_score.html" },
+      { "library": "TorchMetrics", "url": "https://lightning.ai/docs/torchmetrics/stable/classification/auroc.html" }
+    ]
+  },
+  {
+    "name": "AUPRC",
+    "aliases": ["Average Precision", "AP"],
+    "modality": "predictive",
+    "category": "discrimination",
+    "definition": "Area under the Precision-Recall curve. Summarizes the tradeoff between precision and recall at different thresholds.",
+    "range": "[0, 1.0] where baseline equals prevalence",
+    "when_to_use": "Imbalanced datasets where prevalence < 5%. Rare event prediction (e.g., rare diagnoses).",
+    "limitations": "Baseline depends on prevalence (unlike AUROC). Harder to compare across datasets with different prevalence.",
+    "key_paper": "https://doi.org/10.1371/journal.pone.0118432",
+    "implementations": [
+      { "library": "scikit-learn", "url": "https://scikit-learn.org/stable/modules/generated/sklearn.metrics.average_precision_score.html" }
+    ]
+  },
+  {
+    "name": "Expected Calibration Error",
+    "aliases": ["ECE"],
+    "modality": "predictive",
+    "category": "calibration",
+    "definition": "Weighted average of the absolute difference between predicted probability and observed frequency across bins.",
+    "range": "[0, 1] where 0 is perfectly calibrated",
+    "when_to_use": "Assessing whether predicted probabilities are trustworthy for clinical decision-making.",
+    "limitations": "Sensitive to number and width of bins. Multiple binning schemes can give different results.",
+    "key_paper": "https://doi.org/10.1145/1102351.1102430",
+    "implementations": [
+      { "library": "TorchMetrics", "url": "https://lightning.ai/docs/torchmetrics/stable/classification/calibration_error.html" }
+    ]
+  },
+  {
+    "name": "Brier Score",
+    "aliases": ["Mean Squared Error of Probabilities"],
+    "modality": "predictive",
+    "category": "calibration",
+    "definition": "Mean squared difference between predicted probabilities and actual binary outcomes. Decomposes into calibration + discrimination + uncertainty.",
+    "range": "[0, 1] where 0 is perfect",
+    "when_to_use": "Combined assessment of calibration and discrimination. Survival models (Brier score over time).",
+    "limitations": "Hard to interpret clinically. Decomposition needed to separate calibration from discrimination.",
+    "key_paper": "https://doi.org/10.1175/1520-0493(1950)078<0001:VOFEIT>2.0.CO;2"
+  },
+  {
+    "name": "Net Benefit (DCA)",
+    "aliases": ["Decision Curve Analysis"],
+    "modality": "predictive",
+    "category": "clinical_utility",
+    "definition": "Expected benefit of using the model minus expected harm, across a range of threshold probabilities. Compares model vs treat-all vs treat-none.",
+    "range": "Can be negative (model is harmful) to positive (model adds value)",
+    "when_to_use": "Clinical decision-making. Determining the threshold range where the model is useful.",
+    "limitations": "Requires choosing clinically relevant threshold range. Assumes specific harm-to-benefit ratio at each threshold.",
+    "key_paper": "https://doi.org/10.1177/0272989X06295361",
+    "implementations": [
+      { "library": "dcurves (R)", "url": "https://cran.r-project.org/package=dcurves" },
+      { "library": "dca (Python)", "url": "https://github.com/ddsjoberg/dca-python" }
+    ]
+  }
+]

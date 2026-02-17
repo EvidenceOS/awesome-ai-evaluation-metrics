@@ -1,0 +1,28 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "AI Evaluation Metric",
+  "description": "Schema for structured AI evaluation metric entries",
+  "type": "object",
+  "required": ["name", "modality", "category", "definition"],
+  "properties": {
+    "name": { "type": "string", "description": "Metric name" },
+    "aliases": { "type": "array", "items": { "type": "string" }, "description": "Alternative names" },
+    "modality": { "type": "string", "enum": ["predictive", "generative", "computer_vision", "agentic", "cross_modality"] },
+    "category": { "type": "string", "description": "e.g., discrimination, calibration, fairness, clinical_utility" },
+    "definition": { "type": "string", "description": "Brief mathematical or conceptual definition" },
+    "range": { "type": "string", "description": "Value range, e.g., [0, 1] where 1 is perfect" },
+    "when_to_use": { "type": "string" },
+    "limitations": { "type": "string" },
+    "key_paper": { "type": "string", "description": "DOI or URL of original/definitive paper" },
+    "implementations": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "library": { "type": "string" },
+          "url": { "type": "string", "format": "uri" }
+        }
+      }
+    }
+  }
+}

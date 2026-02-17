@@ -1,0 +1,68 @@
+{
+  "title": "AI Agent Autonomy Level Frameworks Comparison",
+  "description": "Three major frameworks for classifying AI agent autonomy, aligned by level",
+  "frameworks": [
+    {
+      "name": "Knight Columbia",
+      "source": "Knight First Amendment Institute at Columbia University",
+      "year": 2024,
+      "focus": "AI governance and editorial autonomy"
+    },
+    {
+      "name": "Data Agents / SIGMOD 2026",
+      "source": "Academic database/data management community",
+      "year": 2026,
+      "focus": "Data management and workflow automation"
+    },
+    {
+      "name": "Bessemer Venture Partners",
+      "source": "Bessemer Venture Partners",
+      "year": 2024,
+      "focus": "Enterprise AI agent investment thesis"
+    }
+  ],
+  "levels": [
+    {
+      "level": 0,
+      "knight_columbia": "No AI — human performs all tasks",
+      "data_agents": "No automation — manual execution",
+      "bessemer": "Human does everything",
+      "health_example": "Clinician reads X-ray without any AI assistance"
+    },
+    {
+      "level": 1,
+      "knight_columbia": "AI generates content, human decides and executes",
+      "data_agents": "AI assists with subtasks on request",
+      "bessemer": "AI suggests, human decides and acts",
+      "health_example": "AI highlights suspicious region, radiologist decides whether to investigate"
+    },
+    {
+      "level": 2,
+      "knight_columbia": "AI executes with human approval required before action",
+      "data_agents": "AI executes routine tasks, human monitors",
+      "bessemer": "AI drafts output, human approves before delivery",
+      "health_example": "AI drafts radiology report, radiologist reviews and signs off"
+    },
+    {
+      "level": 3,
+      "knight_columbia": "AI executes autonomously, human reviews after the fact",
+      "data_agents": "AI handles full workflow with human oversight",
+      "bessemer": "AI executes tasks, human spot-checks periodically",
+      "health_example": "AI triages emergency cases and routes to specialists, clinician reviews queue"
+    },
+    {
+      "level": 4,
+      "knight_columbia": "AI autonomous within defined boundaries, human sets goals",
+      "data_agents": "AI autonomous with guardrails and escalation policies",
+      "bessemer": "AI fully autonomous, human handles exceptions only",
+      "health_example": "AI manages routine screening program (e.g., IDx-DR), escalates abnormals to ophthalmologist"
+    },
+    {
+      "level": 5,
+      "knight_columbia": "Full autonomy — AI sets own goals and executes",
+      "data_agents": "Full autonomy — self-improving agent",
+      "bessemer": "Full autonomy — self-directed agent",
+      "health_example": "Hypothetical: AI manages entire clinical pathway end-to-end (not yet deployed in healthcare)"
+    }
+  ]
+}

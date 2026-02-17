@@ -1,0 +1,82 @@
+[
+  {
+    "name": "awesome-machine-learning",
+    "url": "https://github.com/josephmisiti/awesome-machine-learning",
+    "stars": 65000,
+    "scope": "General ML tools and frameworks",
+    "evaluation_focus": false,
+    "gap": "No evaluation metrics focus"
+  },
+  {
+    "name": "Papers with Code",
+    "url": "https://paperswithcode.com/",
+    "stars": null,
+    "scope": "Benchmarks and leaderboards across ML",
+    "evaluation_focus": true,
+    "gap": "No cross-modality taxonomy, no benchmark critique"
+  },
+  {
+    "name": "Hugging Face Evaluate",
+    "url": "https://github.com/huggingface/evaluate",
+    "stars": 1800,
+    "scope": "NLP/ML metric implementation library",
+    "evaluation_focus": true,
+    "gap": "Code-focused, not curated analysis or taxonomy"
+  },
+  {
+    "name": "TorchMetrics",
+    "url": "https://github.com/Lightning-AI/torchmetrics",
+    "stars": 2000,
+    "scope": "PyTorch metric library",
+    "evaluation_focus": true,
+    "gap": "Implementation only, no curation or critique"
+  },
+  {
+    "name": "HELM",
+    "url": "https://github.com/stanford-crfm/helm",
+    "stars": 2000,
+    "scope": "Holistic LLM evaluation",
+    "evaluation_focus": true,
+    "gap": "LLM-only, single modality"
+  },
+  {
+    "name": "lm-evaluation-harness",
+    "url": "https://github.com/EleutherAI/lm-evaluation-harness",
+    "stars": 6000,
+    "scope": "LLM benchmark suite",
+    "evaluation_focus": true,
+    "gap": "LLM-only, task-focused, no health AI"
+  },
+  {
+    "name": "OpenCompass",
+    "url": "https://github.com/open-compass/opencompass",
+    "stars": 4000,
+    "scope": "LLM evaluation platform",
+    "evaluation_focus": true,
+    "gap": "LLM-only, Chinese AI ecosystem focus"
+  },
+  {
+    "name": "IBM AIF360",
+    "url": "https://github.com/Trusted-AI/AIF360",
+    "stars": 2400,
+    "scope": "AI fairness toolkit (70+ metrics)",
+    "evaluation_focus": true,
+    "gap": "Fairness-only, not comprehensive evaluation"
+  },
+  {
+    "name": "Metrics Reloaded",
+    "url": "https://metrics-reloaded.dkfz.de/",
+    "stars": null,
+    "scope": "Biomedical image analysis metric selection",
+    "evaluation_focus": true,
+    "gap": "Vision-only, not cross-modality"
+  },
+  {
+    "name": "OHDSI Methods Library",
+    "url": "https://github.com/OHDSI/MethodsLibrary",
+    "stars": null,
+    "scope": "Observational study methods for EHR data",
+    "evaluation_focus": true,
+    "gap": "EHR/observational-only, not AI evaluation"
+  }
+]
