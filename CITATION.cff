@@ -1,0 +1,21 @@
+cff-version: 1.2.0
+message: "If you use this resource in your research, please cite it as below."
+type: dataset
+title: "awesome-ai-evaluation-metrics"
+abstract: >-
+  Cross-modality taxonomy of AI evaluation metrics covering predictive,
+  generative, computer vision, and agentic AI systems. Structured data
+  with benchmark critique for clinical AI evaluation.
+authors:
+  - family-names: Ngum
+    given-names: Peter
+    orcid: "https://orcid.org/0009-0001-3635-8"; # TODO: Replace with real ORCID
+repository-code: "https://github.com/EvidenceOS/awesome-ai-evaluation-metrics"
+url: "https://evidenceos.com"
+license: Apache-2.0
+keywords:
+  - ai-evaluation
+  - clinical-ai-metrics
+  - benchmark-critique
+  - evaluation-taxonomy
+  - awesome-list
